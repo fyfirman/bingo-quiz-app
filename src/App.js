@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import "antd/dist/antd.css";
 import Field from './component/Field';
-import { Button, Row, Col } from 'antd';
+import { Row, Col } from 'antd';
 
 export default class App extends React.Component {
   render() {
