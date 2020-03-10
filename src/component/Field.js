@@ -83,7 +83,7 @@ export default class Field extends React.Component {
             </Button>,
           ]}
         >
-          <InputNumber min={0} max={100} step={10} onChange={this.inputAddScoreChange}/>
+          <InputNumber defaultValue={0} min={0} max={100} step={10} onChange={this.inputAddScoreChange}/>
         </Modal>
         <Modal
           title="Topic: Geology"
