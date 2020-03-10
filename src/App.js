@@ -40,6 +40,19 @@ export default class App extends React.Component {
     });
   }
 
+  editScore = (team, score) => {
+    for (var i in this.data) {
+      if (this.data[i].team === team) {
+        this.data[i].score = score;
+        break;
+      }
+    }
+    this.setState({
+      data: this.data
+    });
+  }
+
+
   render() {
     return (
       <div>
@@ -49,6 +62,7 @@ export default class App extends React.Component {
             <Sider>
               <Leaderboard
                 data={this.data}
+                editScore={this.editScore}
               />
               <Scoreboard />
               {/* <Footer>
