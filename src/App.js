@@ -13,14 +13,17 @@ export default class App extends React.Component {
   data = [
     {
       team: 'red',
+      alias: 'Red Team',
       score: 0
     },
     {
-      team: 'blue',
+      team: 'green',
+      alias: 'Green Team',
       score: 0
     },
     {
       team: 'yellow',
+      alias: 'Yellow Team',
       score: 0
     },
   ]
@@ -44,13 +47,13 @@ export default class App extends React.Component {
           <Header>BOREYES 2020</Header>
           <Layout>
             <Sider>
-              <Scoreboard />
               <Leaderboard
                 data={this.data}
               />
-              <Footer>
+              <Scoreboard />
+              {/* <Footer>
                 Copyrigth 2020.
-            </Footer>
+              </Footer> */}
             </Sider>
             <Content>
               <Board

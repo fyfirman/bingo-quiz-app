@@ -118,7 +118,7 @@ export default class Board extends React.Component {
       var rows = [];
       for (var j = 0; j < boardSize.col; j++)
         rows.push(
-          <Col key={1} span={4}>
+          <Col key={1} span={4} className="five-divide">
             <Field
               increaseScore={this.props.increaseScore}
               topic={questionData[(i * boardSize.row) + j].topic}

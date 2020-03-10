@@ -1,5 +1,6 @@
 import React from 'react';
 import { Modal, Button, InputNumber } from 'antd';
+import './css/Field.css';
 
 export default class Field extends React.Component {
   constructor(props) {
@@ -7,8 +8,9 @@ export default class Field extends React.Component {
     this.state = {
       questionVisible: false,
       inputVisible: false,
-      backgroundColor: 'lightblue',
-      targetTeamToInc: ''
+      backgroundColor: '',
+      targetTeamToInc: '',
+      buttonStatus: false
     };
   }
 
@@ -16,7 +18,7 @@ export default class Field extends React.Component {
     this.setState({
       questionVisible: false
     });
-    this.changeColor('black');
+    this.changeColor('#393939');
   }
 
   handleModalButton = color => {
@@ -37,6 +39,19 @@ export default class Field extends React.Component {
   };
 
   changeColor = color => {
+    switch(color){
+      case 'red':
+        color = '#D43637';
+        break;
+      case 'green':
+        color = '#3D8057';
+        break;
+      case 'yellow':
+        color = '#F98926';
+        break;
+      default:
+
+    }
     this.setState({
       backgroundColor: color,
     })
@@ -61,7 +76,8 @@ export default class Field extends React.Component {
 
   inputAddScoreChange = (value) => {
     this.setState({
-      addScore: value
+      addScore: value,
+      buttonStatus: true
     });
   }
 
@@ -69,37 +85,38 @@ export default class Field extends React.Component {
     this.props.increaseScore(team, score);
   }
 
-
   render() {
     return (
       <div>
         <Modal
+          closable={false}
           onCancel={this.handleCancel}
           title="Input score"
           visible={this.state.inputVisible}
           footer={[
-            <Button style={{ backgroundColor: 'red', color: 'white' }} onClick={() => this.handleInput(this.state.targetTeamToInc, this.state.addScore)}>
+            <Button onClick={() => this.handleInput(this.state.targetTeamToInc, this.state.addScore)} disabled={!this.state.buttonStatus}>
               Add score
             </Button>,
           ]}
         >
-          <InputNumber defaultValue={0} min={0} max={100} step={10} onChange={this.inputAddScoreChange} />
+          <InputNumber min={1} max={200} step={10} onChange={this.inputAddScoreChange} />
         </Modal>
         <Modal
           title={'Topic: ' + this.props.topic}
           visible={this.state.questionVisible}
           onCancel={this.handleCancel}
+          width={900}
           footer={[
             <Button onClick={this.handleWrongButton}>
               Wrong
             </Button>,
-            <Button style={{ backgroundColor: 'yellow', color: 'white' }} onClick={() => this.handleModalButton('yellow')}>
+            <Button style={{ backgroundColor: '#F98926', color: 'white' }} onClick={() => this.handleModalButton('yellow')}>
               Correct
             </Button>,
-            <Button style={{ backgroundColor: 'blue', color: 'white' }} onClick={() => this.handleModalButton('blue')}>
+            <Button style={{ backgroundColor: '#3D8057', color: 'white' }} onClick={() => this.handleModalButton('green')}>
               Correct
             </Button>,
-            <Button style={{ backgroundColor: 'red', color: 'white' }} onClick={() => this.handleModalButton('red')}>
+            <Button style={{ backgroundColor: '#D43637', color: 'white' }} onClick={() => this.handleModalButton('red')}>
               Correct
             </Button>,
           ]}
@@ -108,7 +125,6 @@ export default class Field extends React.Component {
         </Modal>
         <a onClick={this.showQuestionModal}>
           <div className="field" style={{ backgroundColor: this.state.backgroundColor }}>
-            tes
           </div>
         </a >
       </div>

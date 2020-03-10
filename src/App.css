@@ -1,38 +1,116 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
+#root{
+  height: 100vh;
+}
+
+.ant-layout{
+  height: 100vh;
+}
+
+.ant-layout-header{
+  color: white !important;
+  padding: 16px;
+  background: #21283B !important;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ant-layout-sider{
+  min-width: 30% !important;
+  padding: 16px;
+  background: #21283B !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ant-layout-content{
+  padding: 8px;
+  background: #21283B;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.ant-modal-body{
+  font-size: 36px !important;
+}
+
+/* Leaderbord */
+.sideboard{
   color: white;
+  background: #222A3F;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 14px;
 }
 
-.App-link {
-  color: #61dafb;
+.sideboard-title{
+  color: white;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.score{
+  float: right;
+}
+
+.red-progress .ant-progress-bg{
+  background-color: #D43637;
+}
+
+.yellow-progress .ant-progress-bg{
+  background-color: #F98926;
+}
+
+.green-progress .ant-progress-bg{
+  background-color: #3D8057;
+}
+
+/* Board */
+.five-divide{
+  display: block;
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20% !important;
+  max-width: 20% !important;
+}
+
+/* Scoreboard */
+.scoreboard-item{
+  text-align: center;
+}
+
+.scoreboard-item button{
+  background: none;
+  border-style: none;
+  color: white;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.text-item{
+  display: inline-grid;
+  margin: 0 16px;
+}
+
+.team-name{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.red-scoreboard-item .team-name{
+  color: #D43637;
+}
+
+.green-scoreboard-item .team-name{
+  color: #3D8057;
+}
+
+.yellow-scoreboard-item .team-name{
+  color: #F98926;
 }
