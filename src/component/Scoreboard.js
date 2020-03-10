@@ -13,7 +13,7 @@ export default class Scoreboard extends React.Component {
   data = [
     {
       team: 'red',
-      score: 500
+      score: 0
     },
     {
       team: 'blue',
@@ -21,7 +21,7 @@ export default class Scoreboard extends React.Component {
     },
     {
       team: 'yellow',
-      score: 20
+      score: 0
     },
   ]
 

@@ -3,6 +3,7 @@ import './App.css';
 import "antd/dist/antd.css";
 import Board from './component/Board';
 import Scoreboard from './component/Scoreboard';
+import Leaderboard from './component/Leaderboard';
 
 export default class App extends React.Component {
   render() {
@@ -10,6 +11,7 @@ export default class App extends React.Component {
       <div>
         <Board />
         <Scoreboard />
+        <Leaderboard />
       </div>
     );
   }
