@@ -6,12 +6,43 @@ import Scoreboard from './component/Scoreboard';
 import Leaderboard from './component/Leaderboard';
 
 export default class App extends React.Component {
+
+  data = [
+    {
+      team: 'red',
+      score: 0
+    },
+    {
+      team: 'blue',
+      score: 0
+    },
+    {
+      team: 'yellow',
+      score: 0
+    },
+  ]
+
+  increaseScore = (team, score) => {
+    for (var i in this.data) {
+      if (this.data[i].team === team) {
+        this.data[i].score += score;
+        break;
+      }
+    }
+    this.setState({
+      data: this.data
+    });
+  }
+
   render() {
     return (
       <div>
-        <Board />
+        <Board
+          increaseScore={this.increaseScore} />
         <Scoreboard />
-        <Leaderboard />
+        <Leaderboard
+          data={this.data}
+        />
       </div>
     );
   }

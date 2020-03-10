@@ -14,7 +14,9 @@ export default class Board extends React.Component {
       for (var j = 0; j < boardSize.col; j++)
         rows.push(
           <Col key={1} span={4}>
-            <Field />
+            <Field
+              increaseScore={this.props.increaseScore}
+              />
           </Col>
         );
       board.push(<Row gutter={[8, 8]}> {rows} </Row>);

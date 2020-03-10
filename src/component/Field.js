@@ -7,7 +7,8 @@ export default class Field extends React.Component {
     this.state = {
       questionVisible: false,
       inputVisible: false,
-      backgroundColor: 'lightblue'
+      backgroundColor: 'lightblue',
+      targetTeamToInc: ''
     };
   }
 
@@ -21,7 +22,8 @@ export default class Field extends React.Component {
   handleModalButton = color => {
     this.showInputModal();
     this.setState({
-      questionVisible: false
+      questionVisible: false,
+      targetTeamToInc: color
     });
     this.changeColor(color)
   };
@@ -52,6 +54,22 @@ export default class Field extends React.Component {
     });
   };
 
+  handleInput = (team, score) => {
+    this.handleCancel();
+    this.increaseScore(team, score);
+  }
+
+  inputAddScoreChange = (value) => {
+    this.setState({
+      addScore: value
+    });
+  }
+
+  increaseScore = (team, score) => {
+    this.props.increaseScore(team, score);
+  }
+
+
   render() {
     return (
       <div>
@@ -60,12 +78,12 @@ export default class Field extends React.Component {
           title="Input score"
           visible={this.state.inputVisible}
           footer={[
-            <Button style={{ backgroundColor: 'red', color: 'white' }} onClick={this.handleCancel}>
+            <Button style={{ backgroundColor: 'red', color: 'white' }} onClick={() => this.handleInput(this.state.targetTeamToInc, this.state.addScore)}>
               Add score
-          </Button>,
+            </Button>,
           ]}
         >
-          <InputNumber min={0} max={100} step={10}/>
+          <InputNumber min={0} max={100} step={10} onChange={this.inputAddScoreChange}/>
         </Modal>
         <Modal
           title="Topic: Geology"
@@ -75,7 +93,7 @@ export default class Field extends React.Component {
             <Button onClick={this.handleWrongButton}>
               Wrong
             </Button>,
-            <Button style={{ backgroundColor: 'green', color: 'white' }} onClick={() => this.handleModalButton('green')}>
+            <Button style={{ backgroundColor: 'yellow', color: 'white' }} onClick={() => this.handleModalButton('yellow')}>
               Correct
             </Button>,
             <Button style={{ backgroundColor: 'blue', color: 'white' }} onClick={() => this.handleModalButton('blue')}>
