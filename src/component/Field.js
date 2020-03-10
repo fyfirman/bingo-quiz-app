@@ -83,10 +83,10 @@ export default class Field extends React.Component {
             </Button>,
           ]}
         >
-          <InputNumber defaultValue={0} min={0} max={100} step={10} onChange={this.inputAddScoreChange}/>
+          <InputNumber defaultValue={0} min={0} max={100} step={10} onChange={this.inputAddScoreChange} />
         </Modal>
         <Modal
-          title="Topic: Geology"
+          title={'Topic: ' + this.props.topic}
           visible={this.state.questionVisible}
           onCancel={this.handleCancel}
           footer={[
@@ -104,7 +104,7 @@ export default class Field extends React.Component {
             </Button>,
           ]}
         >
-          <p>When a source rock is examined under a reflectance microscope, the amount of light reflected by this plant organic matter helps define the maturity of the source rock. Name this organic matter! </p>
+          <p>{this.props.question}</p>
         </Modal>
         <a onClick={this.showQuestionModal}>
           <div className="field" style={{ backgroundColor: this.state.backgroundColor }}>
