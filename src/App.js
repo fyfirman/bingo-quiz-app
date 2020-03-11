@@ -27,27 +27,38 @@ export default class App extends React.Component {
     }
   ];
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: JSON.parse(localStorage.getItem('data')) || this.data
+    }
+  }
+
   increaseScore = (team, score) => {
-    for (var i in this.data) {
-      if (this.data[i].team === team) {
-        this.data[i].score += score;
+    for (var i in this.state.data) {
+      if (this.state.data[i].team === team) {
+        this.state.data[i].score += score;
         break;
       }
     }
     this.setState({
-      data: this.data
+      data: this.state.data
+    }, () => {
+      localStorage.setItem('data', JSON.stringify(this.state.data))
     });
   };
 
   editScore = (team, score) => {
-    for (var i in this.data) {
-      if (this.data[i].team === team) {
-        this.data[i].score = score;
+    for (var i in this.state.data) {
+      if (this.state.data[i].team === team) {
+        this.state.data[i].score = score;
         break;
       }
     }
     this.setState({
-      data: this.data
+      data: this.state.data
+    }, () => {
+      localStorage.setItem('data', JSON.stringify(this.state.data))
     });
   };
 
@@ -57,7 +68,7 @@ export default class App extends React.Component {
         <Layout>
           <Layout>
             <Sider>
-              <Leaderboard data={this.data} editScore={this.editScore} />
+              <Leaderboard data={this.state.data} editScore={this.editScore} />
               <Scoreboard />
             </Sider>
             <Content>
