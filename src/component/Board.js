@@ -146,6 +146,7 @@ export default class Board extends React.Component {
               increaseScore={this.props.increaseScore}
               topic={questionData[i * boardSize.row + j].topic}
               question={questionData[i * boardSize.row + j].question}
+              content={i*boardSize.row + j + 1}
             />
           </Col>
         );

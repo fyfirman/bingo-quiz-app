@@ -10,7 +10,8 @@ export default class Field extends React.Component {
       inputVisible: false,
       backgroundColor: "",
       targetTeamToInc: "",
-      buttonStatus: false
+      buttonStatus: false,
+      content: ""
     };
   }
 
@@ -133,7 +134,9 @@ export default class Field extends React.Component {
           <div
             className="field"
             style={{ backgroundColor: this.state.backgroundColor }}
-          ></div>
+          >
+            {this.props.content}
+          </div>
         </a>
       </div>
     );

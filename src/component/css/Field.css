@@ -1,5 +1,10 @@
 .field{
     background: rgba(196, 196, 196, 0.76);
     min-height: 16.5vh;
+    line-height: 16.5vh;
     border-radius: 10px;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    vertical-align: middle;
 }
