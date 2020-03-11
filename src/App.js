@@ -62,14 +62,30 @@ export default class App extends React.Component {
     });
   };
 
+  editTeamName = (team, teamName) => {
+    for (var i in this.state.data) {
+      if (this.state.data[i].team === team) {
+        this.state.data[i].alias = teamName;
+        break;
+      }
+    }
+    this.setState(
+      {
+        data: this.state.data
+      },
+      () => {
+        localStorage.setItem("data", JSON.stringify(this.state.data));
+      }
+    );
+  };
+
   render() {
     return (
       <div>
         <Layout>
           <Layout>
             <Sider>
-              <Leaderboard data={this.state.data} editScore={this.editScore} />
-              <Scoreboard />
+              <Leaderboard data={this.state.data} editScore={this.editScore} editTeamName={this.editTeamName} />
             </Sider>
             <Content>
               <Board increaseScore={this.increaseScore} />
