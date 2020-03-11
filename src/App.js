@@ -57,7 +57,7 @@ export default class App extends React.Component {
     return (
       <div>
         <Layout>
-          <Header>BOREYES 2020</Header>
+          {/* <Header>BOREYES 2020</Header> */}
           <Layout>
             <Sider>
               <Leaderboard
