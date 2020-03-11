@@ -57,7 +57,6 @@ export default class App extends React.Component {
     return (
       <div>
         <Layout>
-          {/* <Header>BOREYES 2020</Header> */}
           <Layout>
             <Sider>
               <Leaderboard
@@ -65,9 +64,6 @@ export default class App extends React.Component {
                 editScore={this.editScore}
               />
               <Scoreboard />
-              {/* <Footer>
-                Copyrigth 2020.
-              </Footer> */}
             </Sider>
             <Content>
               <Board
@@ -75,8 +71,6 @@ export default class App extends React.Component {
             </Content>
           </Layout>
         </Layout>
-
-
       </div >
     );
   }

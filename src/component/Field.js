@@ -99,7 +99,7 @@ export default class Field extends React.Component {
             </Button>,
           ]}
         >
-          <InputNumber min={1} max={200} step={10} onChange={this.inputAddScoreChange} />
+          <InputNumber min={1} step={10} onChange={this.inputAddScoreChange} />
         </Modal>
         <Modal
           title={'Topic: ' + this.props.topic}
