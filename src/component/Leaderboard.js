@@ -1,28 +1,28 @@
-import React from 'react';
-import { Progress, Modal, InputNumber } from 'antd';
+import React from "react";
+import { Progress, Modal, InputNumber } from "antd";
 
 export default class Leaderboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       inputVisible: false,
-      targetTeam: '',
+      targetTeam: "",
       score: 0
     };
   }
 
-  inputScoreChange = (value) => {
+  inputScoreChange = value => {
     this.setState({
-      score: value,
+      score: value
     });
-  }
+  };
 
-  showModal = (team) => {
+  showModal = team => {
     this.setState({
       inputVisible: true,
       targetTeam: team
-    })
-  }
+    });
+  };
 
   handleCancel = e => {
     console.log(e);
@@ -33,7 +33,7 @@ export default class Leaderboard extends React.Component {
 
   editScore = (team, score) => {
     this.props.editScore(team, score);
-  }
+  };
 
   render() {
     return (
@@ -48,13 +48,24 @@ export default class Leaderboard extends React.Component {
         </Modal>
 
         <h1 className="sideboard-title">Leaderboard</h1>
-        {this.props.data.map((data) =>
+        {this.props.data.map(data => (
           <div>
             <span>{data.alias}</span>
-            <span onClick={() => { this.showModal(data.team) }} className='score'>{data.score}</span>
-            <Progress className={data.team + "-progress"} percent={Math.round(data.score / 20)} showInfo={false} />
+            <span
+              onClick={() => {
+                this.showModal(data.team);
+              }}
+              className="score"
+            >
+              {data.score}
+            </span>
+            <Progress
+              className={data.team + "-progress"}
+              percent={Math.round(data.score / 20)}
+              showInfo={false}
+            />
           </div>
-        )}
+        ))}
       </div>
     );
   }
