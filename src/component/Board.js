@@ -19,8 +19,9 @@ export default class Board extends React.Component {
           "2. According to excess lime content, mention the three class of Lime muds? Answer : (1) low-lime, 0.5 to 2 lbm/bbl, (2) medium-lime, 2 to 4 lbm/bbl and (3) high-lime, over 4 lbm/bbl"
       },
       {
+        imagesURI: 'https://i.ibb.co/k9B1sZY/image.png',
         question:
-          "3. The annular mud velocity, is usually considered the most important aspect. With formula ### What is dH & dDS …" //images
+          "3. The annular mud velocity, is usually considered the most important aspect. With formula above. What is dH & dDS …" //images
       },
       {
         question:
@@ -94,6 +95,7 @@ export default class Board extends React.Component {
           "21.	What conditions are required for Darcy’s Law to be valid?"
       },
       {
+        imagesURI: "https://i.ibb.co/TYF32Qy/image.png",
         question:
           "22.	Figure question, what is the graph for ?"
       },
@@ -118,6 +120,7 @@ export default class Board extends React.Component {
         rows.push(
           <Col key={1} span={4} className="five-divide">
             <Field
+              imagesURI={questionData[i * boardSize.row + j].imagesURI}
               increaseScore={this.props.increaseScore}
               question={questionData[i * boardSize.row + j].question}
               content={i*boardSize.row + j + 1}

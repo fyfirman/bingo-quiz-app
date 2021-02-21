@@ -128,6 +128,9 @@ export default class Field extends React.Component {
             </Button>
           ]}
         >
+          {this.props.imagesURI && <div style={{textAlign: 'center', width: '100%'}}>
+              <img src={this.props.imagesURI} style={{minWidth: 250}}/>
+            </div>}
           <p>{this.props.question}</p>
         </Modal>
         <a onClick={this.showQuestionModal}>
