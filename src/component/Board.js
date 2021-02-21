@@ -11,128 +11,103 @@ export default class Board extends React.Component {
 
     const questionData = [
       {
-        topic: "Geology",
         question:
-          "When a source rock is examined under a reflectance microscope, the amount of light reflected by this plant organic matter helps define the maturity of the source rock. Name this organic matter!"
+          "1. A class of muds that contain potassium ion (K+) dissolved in the water phase. They are the most widely accepted water mud system for drilling water-sensitive shales, especially hard, brittle shales is.."
       },
       {
-        topic: "Trivia",
         question:
-          "This is a double logarithmic plot based on the Archie Equation of a resistivity measurement on the x-axis versus a porosity measurement on the y-axis. Water resistivities can be determinated from lines drawn on this plot. What is this plot called?"
+          "2. According to excess lime content, mention the three class of Lime muds? Answer : (1) low-lime, 0.5 to 2 lbm/bbl, (2) medium-lime, 2 to 4 lbm/bbl and (3) high-lime, over 4 lbm/bbl"
       },
       {
-        topic: "Production",
         question:
-          "3	It’s he amount of time a liquid stays in a vessel. It assures that equilibrium between the liquid and gas has been reached at separator pressure. Name it..."
+          "3. The annular mud velocity, is usually considered the most important aspect. With formula ### What is dH & dDS …" //images
       },
       {
-        topic: "Geology",
         question:
-          "What kind of factor that will change of litological type in reservoir?"
+          "4. The variation of the Earth's exposure to the sun's rays, or insolation, that results from variations in the orbit of the Earth and the tilt of its axis, and that might affect climate, sea level and sedimentation is…."
       },
       {
-        topic: "Drilling",
         question:
-          "This fluid  used to separate drilling fluids and cementing slurrie, it  can be designed for use with either water-based or oil-based drilling fluids and prepares both pipe and formation for the cementing operation. What is the terminology of this fluid?"
+          "5. In Cartesian coordinates, it is the sum of the partial derivatives of each component of the vector field with respect to the corresponding spatial coordinate: div V = ∇·V = ∂Vx/∂x + ∂Vy/∂y + ∂Vz/∂z… "
       },
       {
-        topic: "Geophysicst",
         question:
-          "What type of wireline log that have similar operational principle with Proximity Log?"
+          "6. In general, the dominance of seismic technology in reservoir geophysics is because of three factors, mention it .."
       },
       {
-        topic: "Drilling",
         question:
-          "This kind of device is commonly called a three-phase separator because it can separate gas, oil and free water. The liquids that are discharged from it are further treated in vessels called treaters. What is this kind of device called?"
+          "7. The space between the shaped charge and the internal surface of the perforating gun body is…"
       },
       {
-        topic: "Production",
         question:
-          "What important additive addition could be made to a Portland cementation to improve its high-pressure / high-temperature (HPHT) stability? "
+          "8. Materials typically found in certain types of barium or strontium scales that may be deposited in the wellbore or production tubulars is…"
       },
       {
-        topic: "Trivia",
-        question: "What is the largest merger in American History?"
+        question: "9. What is a conventional method of mapping reservoir parameters in two dimensions, x and y?"
       },
       {
-        topic: "Geology",
         question:
-          "What’s name of a fault that is created in an actively forming basin. It is often parallel to the shore line when created?"
+          "10. The natural form that a section of coiled tubing string will take if spooled from the reel and allowed to rest without any tension applied is.."
       },
       {
-        topic: "Trivia",
         question:
-          "Projection of geology condition along the line in one area at the vertical front from a stone which the function are to know the stratification position from each stone and to know the track of geology structure : sincline, anticline. Means for ..... "
+          "11.	Usually an unmanned diving vehicle that performs repairs or maintenance on a subsea well is known as…."
       },
       {
-        topic: "Geophysicst",
         question:
-          "What is geophysical method that commonly use in oil reservoir delineation? "
+          "12.	What year was petrobras formed ? "
       },
       {
-        topic: "Drilling",
         question:
-          "CALCULATION. Calculation problem! Calculate the API density if we have specific gravity 0,879 !"
+          "13.	What Brazilian mining nillionaire began OGX company in 2007 ? "
       },
       {
-        topic: "Production",
         question:
-          "This phenomenon can occur anywhere in the production system, either at bottomhole or in surface lines and equipment. It is the loss of metal due to chemical or electrochemical reactions, which could eventually destroy a structure. The rate of it will vary with time depending on the particular conditions of the oil field, such as the amount of water produced, secondary recovery operations and pressure variations. Name it! "
+          "14.	The preference of a solid to contact one liquid or gas, known as the wetting phase, rather than another call as?"
       },
       {
-        topic: "Drilling",
         question:
-          "These tools are used for placing very small volumes of plugging material precisely and economically, and can be run on wireline, slickline, or sandline, depending on the tool. This tools usually called as? "
+          "15.	What is the term for the unit used to remove minute water particles from natural gas if dehydration was not attained using separators"
       },
       {
-        topic: "Trivia",
         question:
-          "Which is true or false, that the most of the world’s proven oil reserves are located in South America?"
+          "16.	A unit of measurement established by the American Petroleum Institute (API) that indicates the density of a liquid call as?"
       },
       {
-        topic: "Geophysicst",
         question:
-          "What is the term of the seismic data recorded for one channel.This is a recording of the Earth's response to seismic energy passing from the source, through subsurface layers, and back to the receiver… "
+          "17.	A small variable profile valve put in a flowline and used with a pilot to restrict the flow into the pilot and make the pilot more or less sensitive to changing conditions."
       },
       {
-        topic: "Production",
         question:
-          "This is a sand-control method used to prevent production of formation sand. In these operations, a steel screen is placed in the wellbore and the surrounding annulus packed with prepared gravel of a specific size designed to prevent the passage of formation sand. The primary objective is to stabilize the formation while causing minimal impairment to well productivity. What is the name of the method?"
+          "18.	Referring to the flow of two immiscible fluids, oil and water, oil and gas, or gas and water"
       },
       {
-        topic: "Geology",
         question:
-          "This is a velocity gradient measured across the diameter of a fluid-flow channel, be it a pipe, annulus or other shape. It is the rate of change of velocity at which one layer of fluid passes over an adjacent layer. Name this velocity gradient!"
+          "19.	The solution to the diffusion equation that results when the well (inner) boundary condition is treated as a cylinder of finite radius instead of treating the well as a line source."
       },
       {
-        topic: "Drilling",
         question:
-          "This process of cementing usually done to correct problems associated with the primary cement job, called as ? "
+          "20.	Organic matter normally decomposes on the death of the plant or animal and is only preserved under conditions of …… and….."
       },
       {
-        topic: "Trivia",
         question:
-          "In an effort to integrate, Anglo-Persian purchased one of the largest pipeline networks in the United Kingdom. What was the name of the company that owned the pipeline?  "
+          "21.	What conditions are required for Darcy’s Law to be valid?"
       },
       {
-        topic: "Reservoir",
         question:
-          "This function has been used for correlating capillary pressure data for rocks with similar pore types and wettability, but with different permeabilities. What is this function called?"
+          "22.	Figure question, what is the graph for ?"
       },
       {
-        topic: "Drilling",
         question:
-          "A list containing details of tubulars that have been prepared for running, or that have been retrieved from the wellbore. Each tubing joint is numbered and the corresponding length and other pertinent details noted alongside. What is it ? "
+          "23.	In what basin were the giant Tupi and Jupiter fields discovered in?"
       },
       {
-        topic: "Trivia",
         question:
-          "What kind of methods of predicting the oil formation volume factor that presented a graphical correlation for estimating the oil formation volume factor with the gas solubility, gas gravity, oil gravity, and reservoir temperature as the correlating parameters? "
+          "24.	When and Where was the first oil refinery built?"
       },
       {
-        topic: "Reservoir",
         question:
-          "We can group permeability divided by viscosity into a term. Mention this term"
+          "25.	When SPE Java Indonesia section was established?"
       }
     ];
 
@@ -144,7 +119,6 @@ export default class Board extends React.Component {
           <Col key={1} span={4} className="five-divide">
             <Field
               increaseScore={this.props.increaseScore}
-              topic={questionData[i * boardSize.row + j].topic}
               question={questionData[i * boardSize.row + j].question}
               content={i*boardSize.row + j + 1}
             />

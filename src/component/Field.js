@@ -103,7 +103,7 @@ export default class Field extends React.Component {
           <InputNumber min={1} step={10} onChange={this.inputAddScoreChange} />
         </Modal>
         <Modal
-          title={"Topic: " + this.props.topic}
+          // title={"Topic: " + this.props.topic}
           visible={this.state.questionVisible}
           onCancel={this.handleCancel}
           width={900}
